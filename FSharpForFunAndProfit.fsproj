@@ -54,6 +54,7 @@
     <Content Include="packages.config" />
     <None Include="21_type_system_correct_code.fsx" />
     <None Include="20_exhaustive_pattern_matching.fsx" />
+    <None Include="22_worked_example_correctness.fsx" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
