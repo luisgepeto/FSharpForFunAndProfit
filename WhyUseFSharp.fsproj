@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <TargetFSharpCoreVersion>4.4.1.0</TargetFSharpCoreVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Name>FSharpForFunAndProfit</Name>
+    <Name>WhyUseFSharp</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -55,6 +55,9 @@
     <None Include="21_type_system_correct_code.fsx" />
     <None Include="20_exhaustive_pattern_matching.fsx" />
     <None Include="22_worked_example_correctness.fsx" />
+    <None Include="24_asynchronous_programming.fsx" />
+    <None Include="28_seamless_interoperation_dotnet.fsx" />
+    <None Include="29_anything_csharp_can.fsx" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />

@@ -100,3 +100,6 @@ open Microsoft.FSharp.Reflection
 
 type Account = {Id:int; Name:string}
 let fields = FSharpType.GetRecordFields(typeof<Account>) |> Array.map (fun  propInfo -> propInfo.Name, propInfo.PropertyType.Name)
+
+type Choices = A of int | B of string
+let choices = FSharpType.GetUnionCases(typeof<Choices>) |> Array.map (fun choiceInfo -> choiceInfo.Name)
