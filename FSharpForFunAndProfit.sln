@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpForFunAndProfit", "FSharpForFunAndProfit.fsproj", "{62386EED-BBD2-407F-B2D7-1A621B97EB5F}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "WhyUseFSharp", "WhyUseFSharp.fsproj", "{62386EED-BBD2-407F-B2D7-1A621B97EB5F}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ThinkingFunctionally", "ThinkingFunctionally\ThinkingFunctionally.fsproj", "{DDE0EA2C-7086-4F40-909B-5DB5B96A60DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{62386EED-BBD2-407F-B2D7-1A621B97EB5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62386EED-BBD2-407F-B2D7-1A621B97EB5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62386EED-BBD2-407F-B2D7-1A621B97EB5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDE0EA2C-7086-4F40-909B-5DB5B96A60DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDE0EA2C-7086-4F40-909B-5DB5B96A60DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDE0EA2C-7086-4F40-909B-5DB5B96A60DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDE0EA2C-7086-4F40-909B-5DB5B96A60DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
