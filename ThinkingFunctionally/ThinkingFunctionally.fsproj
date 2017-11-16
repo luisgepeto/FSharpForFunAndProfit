@@ -56,6 +56,8 @@
     <None Include="6_partial_application.fsx" />
     <None Include="7_function_associativity_composition.fsx" />
     <None Include="8_defining_functions.fsx" />
+    <None Include="9_function_signatures.fsx" />
+    <None Include="10_organizing_functions.fsx" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
