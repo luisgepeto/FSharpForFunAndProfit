@@ -74,3 +74,78 @@ module OtherStuff' =
     let add1 x = add' x 1
     let add1Float x = MathStuff'.FloatLib.add x 1.0
     let sub1Float x = FloatLib.subtract x 1.0
+
+//top level modules
+//a top level module are defined slightly different than the modules
+//module declaration is on top of the file and there is no = sign
+//the module contents are not indented
+
+//shadowing
+//if a function has the same name it will mask any function declared previously
+//to solve this we could use the RequireQualifiedAccess modifier
+//this will not allow the module to be opened
+[<RequireQualifiedAccess>]
+module BustedStuff =
+    let add x y = x + y
+
+    [<RequireQualifiedAccess>]
+    module BustedLib =
+        let add x y :float = x + y
+
+open BustedStuff //cannot be opened
+open BustedStuff.BustedLib //cannot be opened
+let result = BustedStuff.add  1 2
+let result' = BustedStuff.BustedLib.add  1.0 2.0
+
+//namespaces can be used just as in C#
+namespace Utilities
+module CrowdedStreets =
+    let add x y = x + y
+//however indentation rules apply
+//in order to not use indentation a namespace can be also written implicitly as
+module Utilities.CrowdedStreets
+//we can even define multiple namespaces on the same file
+
+
+//mixing types and functions in modules
+//data structure and functions are combined in a module not a class
+//a common pattern for mixing types and functions is
+//1. having the type declared separately from the functions
+//2. having the type declared in the same module as the functions
+
+//FRIST APPROACH
+namespace Example
+
+type PersonType = {First:string; Last:string}
+
+module Person =
+
+    let create first last = {First = first; Last = last}
+    let fullName {First=first; Last=last} = first + " " + last
+
+//test
+let person = Person.create "john" "doe"
+Person.fullName person |> printfn "fullname is %s"
+
+
+//SECOND APPROACH
+module Customer =
+    type T = {AccountId:int; Name:string}
+    let create id name = {T.AccountId = id; T.Name = name}
+    let isValid {T.AccountId=id;} = id > 0
+
+//test
+let customer = Customer.create 42 "bob"
+Customer.isValid customer |> printfn "is valid %b"
+
+//notice that we almost always have a factory method to create the type
+//this means that we wont need to explicitly name the type in the client code
+//FIRST APPROACH is more .NET like and for sharing libraries (exported class names are as expected)
+//SECOND is more common for functional languages
+
+
+//if you have a set of types that need to be declared withoout function s
+//we can do so in a namespace only
+namespace Example
+
+type PersonType = {First:string; Last:string}
